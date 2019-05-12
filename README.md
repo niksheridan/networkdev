@@ -1,4 +1,4 @@
-# Networkdev Machine [![Build Status](https://travis-ci.org/niksheridan/networkdev.svg?branch=master)](https://travis-ci.org/niksheridan/networkdev)
+# Networkdev Machine [![Build Status](https://travis-ci.com/niksheridan/networkdev.svg?branch=master)](https://travis-ci.com/niksheridan/networkdev)
 
 Development Machine for Network Engineers
 
