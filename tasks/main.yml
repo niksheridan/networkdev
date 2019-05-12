@@ -54,6 +54,10 @@
   when:
     - ansible_facts['distribution'] == "Debian"
 
+- name: Install Python3.6 Pip
+  yum: name=python36-pip state=present
+  when:
+    - ansible_facts['distribution'] == "CentOS"
 
 #- name: Fail2ban | Manually activate fail2ban
 #  command: service fail2ban start
