@@ -1,11 +1,11 @@
 ---
 galaxy_info:
   author: Nik Sheridan (heavily borrowed from Ignacio Sanchez Gines)
-  description: Role for prepping a Raspberry Pi for used as a monitoring system
-  company:
+  description: Role for creation of a network developer machine
+  company: Papillon Limited
   license: license (MIT)
   min_ansible_version: 2.0.0
-  issue_tracker_url: https://github.com/soapdish/debian_hardening/issues
+  issue_tracker_url: https://travis-ci.com/niksheridan/networkdev/issues
   github_branch: master
 
   platforms:

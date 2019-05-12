@@ -9,11 +9,6 @@
     name: ntp
     state: present
 
-- name: Fail2ban | DNF | Ensure Fail2ban package is installed
-  dnf:
-    name: fail2ban
-    state: present
-
 - name: Sshd | DNF | Ensure SSH package is installed
   dnf:
     name: sshd
