@@ -13,3 +13,10 @@
   yum:
     name: openssh-server
     state: present
+
+- name: Pip3.6 | YUM | Install Python3.6 Pip
+  yum: 
+    name: python36-pip 
+    state: present
+  when:
+    - ansible_facts['distribution'] == "CentOS"
