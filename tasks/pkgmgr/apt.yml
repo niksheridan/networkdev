@@ -1,0 +1,20 @@
+---
+- name: Nginx | APT | Ensure Nginx package is installed
+  apt:
+    name: nginx
+    state: present
+
+- name: Ntp | APT | Ensure Ntp package is installed
+  apt:
+    name: ntp
+    state: present
+
+- name: Fail2ban | APT | Ensure Fail2ban package is installed
+  apt:
+    name: fail2ban
+    state: present
+
+- name: Ssh | APT | Ensure SSH package is installed
+  apt:
+    name: openssh-server
+    state: present

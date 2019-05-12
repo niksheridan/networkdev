@@ -1,0 +1,66 @@
+---
+- name: NGINX | Installation
+  include_tasks: "pkgmgr/{{ ansible_pkg_mgr }}.yml"
+
+- name: NGINX | Ensure Nginx service is enabled and started
+  service:
+    name: nginx
+    enabled: yes
+    state: started
+
+- name: NTP | Ensure ntp service is enabled and started on "CentOS"
+  service:
+    name: ntpd
+    enabled: yes
+    state: started
+  when:
+    - ansible_facts['distribution'] == "CentOS"
+
+- name: NTP | Ensure ntp service is enabled and started on "Debian"
+  service:
+    name: ntp
+    enabled: yes
+    state: started
+  when:
+    - ansible_facts['distribution'] == "Debian"
+
+- name: SSH | Ensure ssh service is enabled and started on "CentOS"
+  service:
+    name: sshd
+    enabled: yes
+    state: started
+  when:
+    - ansible_facts['distribution'] == "CentOS"
+
+- name: SSH | Ensure ssh service is enabled and started on "Debian"
+  service:
+    name: sshd
+    enabled: yes
+    state: started
+  when:
+    - ansible_facts['distribution'] == "Debian"
+
+# Create the WiFi directory if not present
+- name: WiFi | Creates Supplicant directory if not present
+  file:
+    path: /etc/wpa_supplicant/
+    state: directory
+
+# Copy across the template file if distribtion is Debian
+- name: WiFi | Copy wpa_supplicant.conf file to WiFi configuration directory
+  copy: 
+    src: wpa_supplicant.conf 
+    dest: /etc/wpa_supplicant/wpa_supplicant.conf
+  when:
+    - ansible_facts['distribution'] == "Debian"
+
+
+#- name: Fail2ban | Manually activate fail2ban
+#  command: service fail2ban start
+#  register: fail2ban_output
+#
+#- name: Fail2ban | Ensure fail2ban service is enabled and started
+#  service:
+#    name: fail2ban
+#    enabled: yes
+#    state: started

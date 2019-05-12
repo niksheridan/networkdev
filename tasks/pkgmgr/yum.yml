@@ -1,0 +1,20 @@
+---
+- name: Nginx | YUM | Ensure Nginx package is installed
+  yum:
+    name: nginx
+    state: present
+
+- name: Ntp | YUM | Ensure Ntp package is installed
+  yum:
+    name: ntp
+    state: present
+
+- name: Fail2ban | YUM | Ensure Fail2ban package is installed
+  yum:
+    name: fail2ban
+    state: present
+
+- name: Ssh | YUM | Ensure SSH package is installed
+  yum:
+    name: openssh-server
+    state: present

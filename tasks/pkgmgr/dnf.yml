@@ -1,0 +1,20 @@
+---
+- name: Nginx | DNF | Ensure Nginx package is installed
+  dnf:
+    name: nginx
+    state: present
+
+- name: Ntp | DNF | Ensure Ntp package is installed
+  dnf:
+    name: ntp
+    state: present
+
+- name: Fail2ban | DNF | Ensure Fail2ban package is installed
+  dnf:
+    name: fail2ban
+    state: present
+
+- name: Sshd | DNF | Ensure SSH package is installed
+  dnf:
+    name: sshd
+    state: present
