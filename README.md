@@ -14,5 +14,5 @@ Ubuntu may need to be added to this for testing.
 ## Execution on Windows
 
 A companion VM could be deployed that would run a playbook on the actual VM to be used.  
-This might work around the problem not being able to run ansible on the host if is is 
+This might work around the problem not being able to run ansible on the host if it is
 windows.
