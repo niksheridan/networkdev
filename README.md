@@ -8,3 +8,5 @@ Testing provisioning playbooks for:
 
 * Centos
 * Debian
+
+Ubuntu may need to be added to this for testing.
