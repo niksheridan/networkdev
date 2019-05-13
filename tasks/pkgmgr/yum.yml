@@ -36,7 +36,7 @@
     state: present
 
 - name: Install tcpdump
-    yum: 
+  yum: 
     name: tcpdump
     state: present
 
