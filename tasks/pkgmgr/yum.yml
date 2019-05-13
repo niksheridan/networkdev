@@ -29,12 +29,12 @@
   yum: 
     name: python-wheel
     state: present
-#
-##- name: Install epel-release compiler
-##  yum: 
-##    name: epel-release 
-##    state: present
-#
+
+- name: Install epel-release compiler
+  yum: 
+    name: epel-release 
+    state: present
+
 #- name: Install tcpdump
 #    yum: name=tcpdump state=present
 #
