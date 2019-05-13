@@ -25,10 +25,10 @@
     state: present
 
 # issue below here
-#- name: Install Python Wheel
-#  yum: 
-#    name: python-wheel
-#    state: present
+- name: Install Python Wheel
+  yum: 
+    name: python-wheel
+    state: present
 #
 ##- name: Install epel-release compiler
 ##  yum: 
