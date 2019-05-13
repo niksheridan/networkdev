@@ -40,10 +40,10 @@
 ###    name: python36.x86_64 
 ###    state: present
 
-#- name: Install python C interface
-#  yum: 
-#    name: libffi-devel 
-#    state: present
+- name: Install python C interface
+  yum: 
+    name: libffi-devel 
+    state: present
 #
 #- name: Install python development kit
 #  yum: 
