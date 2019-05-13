@@ -18,3 +18,8 @@
   yum: 
     name: python36-pip 
     state: present
+
+- name: Vim | YUM | Install VIM text editor
+  yum:
+    name: vim
+    state: present
