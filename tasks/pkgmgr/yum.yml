@@ -40,10 +40,10 @@
     name: tcpdump
     state: present
 
-- name: Install python 3.6
-  yum:
-    name: python36.x86_64 
-    state: present
+###- name: Install python 3.6
+###  yum:
+###    name: python36.x86_64 
+###    state: present
 
 #- name: Install python C interface
 #  yum: 
