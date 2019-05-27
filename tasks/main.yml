@@ -1,12 +1,6 @@
 ---
-- name: NGINX | Installation
+- name: NetworkDev | Install Standard Applications
   include_tasks: "pkgmgr/{{ ansible_pkg_mgr }}.yml"
-
-- name: NGINX | Ensure Nginx service is enabled and started
-  service:
-    name: nginx
-    enabled: yes
-    state: started
 
 - name: NTP | Ensure ntp service is enabled and started on "CentOS"
   service:
@@ -53,7 +47,6 @@
     dest: /etc/wpa_supplicant/wpa_supplicant.conf
   when:
     - ansible_facts['distribution'] == "Debian"
-
 
 #- name: Fail2ban | Manually activate fail2ban
 #  command: service fail2ban start
