@@ -133,8 +133,21 @@
       state: started
       name: docker
 
-  - name: Add vagrant user to docker group
+  - name: Add nsheridan user to docker group
     user:
-      name: vagrant
-      comment: vagrant
+      name: nsheridan
+      comment: nsheridan
       group: docker
+
+  - name: Add powershell repo
+    yum_repository:
+      name: packages-microsoft-com-prod
+      description: Powershell Production Repository
+      file: prod.repo
+      baseurl: https://packages.microsoft.com/config/rhel/7/
+      gpgkey: https://packages.microsoft.com/keys/microsoft.asc 
+      gpgcheck: yes
+      enabled: yes
+
+  - name: Install Powershell
+    yum: name=powershell state=present
